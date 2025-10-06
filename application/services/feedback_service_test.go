@@ -13,7 +13,7 @@ func TestFeedbackService(t *testing.T) {
 	t.Run("Should generate and apply feedback to an existing CV successfully.", func(t *testing.T) {
 		repo := adapters.NewInmemoryCVRepository()
 		fakeFeedbackSystem := &adapters.FakeFeedbackSystem{
-			Response: "Good CV, but missing education details",
+			Response: "Good CV, but it is missing education details",
 		}
 
 		eventBus := event.NewEventBus()
